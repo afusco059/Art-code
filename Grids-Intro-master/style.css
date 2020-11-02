@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* https://www.w3schools.com/cssref/css_units.asp */
+.grid-container {
+    height: 80vh;
+    border: 10px solid cornflowerblue;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-evenly;
+    grid-gap:10px;
+}
+
+.grid-item{
+    background-color: rgb(211, 211, 211);
+    border: 4px solid rgb(181, 235, 179);
+    padding: 1em;
+}
+
+.item-1{
+grid-column: 1/4;
+background-color: aquamarine;
+}
+.item-2{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+}
+.item-3{
+ grid-row: 3/ span 3; 
+ grid-column: 1/ span 2;  
+ background-color: cornflowerblue;
+ justify-self: center;
+    align-self: center;
+}
+
+.item-4{
+    grid-row: 1/1;
+    grid-column: 1/4;
+    justify-self: center;
+    align-self: center;
+}
+
+.item-5{
+    grid-area: 1 / 2 / span 2 / span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.item-6{
+    
+}
+
+.item-7{
+    
+}
+
+.item-8{
+    
+}
+@media screen and (min-width: 600px) {
+    body{
+        background-color: red;
+    }
+    .item-8{
+    grid-area: 1 / 2 / span 2 / span 2;
+}   
+
+} 
+@media screen and (min-width: 800px) {
+    body{
+        background-color:blue;
+    }
+.item-8{
+    grid-area: 1 / 2 / span 2 / span 2;
+}
+
+} 
+
+
